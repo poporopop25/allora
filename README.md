@@ -53,9 +53,7 @@ cp config.example.json config.json
 nano config.json
 ```
 # Step 3 
-- <b> Replace <i>YOUR_WALLET_NAME & SEED_PHRASE</i></b>
-- To save the config.json file `Ctrl+X Y ENTER`
-- Edit RPC if its not working: https://sentries-rpc.testnet-1.testnet.allora.network/
+- Edit config.json copy & replace
 ```bash
 {
     "wallet": {
@@ -155,15 +153,18 @@ nano config.json
     ]
 }
 ```
+- <b> Replace <i>YOUR_WALLET_NAME & SEED_PHRASE</i></b>
+- To save the config.json file `Ctrl+X Y ENTER`
+- Edit RPC if its not working: https://sentries-rpc.testnet-1.testnet.allora.network/
 # Step 4
 ```bash
 chmod +x init.config
 ./init.config
 ```
 # Step 5
-- Edit app.py
-- Register on Coingecko https://www.coingecko.com/en/developers/dashboard & Create Demo API KEY
-- Copy & Replace API with your `COINGECKO API` , then save `Ctrl+X Y ENTER`.
+- Edit app.py copy & replace
+- Register on Coingecko & create demo account https://www.coingecko.com/en/developers/dashboard & Create Demo API KEY
+- Replace API with your `COINGECKO API` , then save `Ctrl+X Y ENTER`.
 ```bash
 nano app.py
 ```
@@ -262,7 +263,7 @@ if __name__ == '__main__':
 ```bash
 nano requirements.txt
 ```
-Copy & Paste, then save `Ctrl+X Y ENTER`
+Copy & replace, then save `Ctrl+X Y ENTER`
 ```bash
 flask[async]
 gunicorn[gthread]
@@ -282,6 +283,19 @@ docker compose up --build -d
 # Register here to track your points: https://app.allora.network?ref=eyJyZWZlcnJlcl9pZCI6IjA1ZThhODY3LWY0MGMtNGIwYi1hNGZjLTkwNGI5NjUyNzcyYyJ9
 # Check your wallet here: http://worker-tx.nodium.xyz/
 ![image](https://github.com/user-attachments/assets/6e9ce7fd-fdf5-40d2-98f9-d20eb8486fce)
+# Other Command
+Check worker logs
+```bash
+docker logs -f worker
+```
+Docker down
+```bash
+docker compose down
+```
+Docker up
+```bash
+docker compose up -d
+```
 Thank to 0xtnpxsgt for the guide!
 
 Join my telegram for your question - https://t.me/airdropPH2024room
